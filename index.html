@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave, mer om variabler</title>
+</head>
+<body id="mainContent">
+
+    <div id="hey" onclick="hello()">Hei og hopp</div>
+
+<div id="colors">
+    <div class="squares" id="blue" onclick="divClick('lightblue')"></div> 
+    <div class="squares" id="green" onclick="divClick('lightgreen')"></div>
+    <div class="squares" id="pink" onclick="divClick('lightpink')"></div>
+</div>
+
+<div id="emptyBox">
+    <div id="empty"></div>
+</div>
+
+<div id="btn">
+<button id="changeColor" onclick="colorSwitch">Trykk her </button>
+</div>
+
+<script>
+    function hello(){
+    document.getElementById("hey").classList.toggle("styling");
+}    
+
+function divClick(color) {
+  empty.style.backgroundColor = color;
+}
+
+changeColor.addEventListener('click', colorSwitch);
+
+    function colorSwitch(){
+        let color = mainContent.style.backgroundColor; 
+        if (color === 'lightblue' || color === 'lightblue') {  
+          mainContent.style.backgroundColor = 'lightgreen';
+        }
+        else if (color === 'lightgreen') {
+          mainContent.style.backgroundColor = 'lightpink';
+        }
+
+        else if (color === 'lightpink') {
+          mainContent.style.backgroundColor = 'lightsalmon';
+        }
+        else if (color === 'lightsalmon') {
+          mainContent.style.backgroundColor = 'lightblue';
+        }
+        else {
+          mainContent.style.backgroundColor = 'lightblue';
+        }
+      }
+
+</script>
+<style>
+
+    #hey {
+        display:flex;
+        justify-content: center;
+        margin: 20px;
+        border: solid 1px;
+        
+    }
+    .styling {
+        background-color: rgb(238, 232, 68);
+        font-size: xx-large;
+        text-overflow: clip;
+    }
+    
+    body {
+        margin: 100px;
+    }
+    #btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+#empty {
+    border: solid 1px;
+    width: 100px;
+    height:100px;
+    background-color: white;
+}
+#emptyBox {
+    display: flex;
+    justify-content: center;
+    border: solid 1 px;
+    column-gap: 10px;
+    
+}
+
+#colors {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    
+}
+#blue {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+#green {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+}
+#pink {
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+}
+.squares {
+    border: solid 1px; 
+}
+</style>
+
+    
+</body>
+</html>
